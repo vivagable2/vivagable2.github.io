@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Date Auction | Aviv’s Crazy Flight</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="The Date Auction" />
+<meta name="author" content="GitHub User" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Table of Contents Introduction Explanation of First and Second Price Auctions" />
+<meta property="og:description" content="Table of Contents Introduction Explanation of First and Second Price Auctions" />
+<link rel="canonical" href="http://localhost:4000/2022/07/28/the-date-auction.html" />
+<meta property="og:url" content="http://localhost:4000/2022/07/28/the-date-auction.html" />
+<meta property="og:site_name" content="Aviv’s Crazy Flight" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-28T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Date Auction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"GitHub User"},"dateModified":"2022-07-28T00:00:00+02:00","datePublished":"2022-07-28T00:00:00+02:00","description":"Table of Contents Introduction Explanation of First and Second Price Auctions","headline":"The Date Auction","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2022/07/28/the-date-auction.html"},"url":"http://localhost:4000/2022/07/28/the-date-auction.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Aviv's Crazy Flight" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Aviv&#39;s Crazy Flight</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">The Date Auction</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2022-07-28T00:00:00+02:00" itemprop="datePublished">
+        Jul 28, 2022
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="table-of-contents">Table of Contents</h1>
+<ol>
+  <li><a href="#introduction">Introduction</a>
+    <ol>
+      <li><a href="#explanation1">Explanation of First and Second Price Auctions</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h1 id="introduction-">Introduction <a name="introduction"></a></h1>
+
+<p>Disclaimer: I don’t take any responsibility for the conversation that comes up 
+when you start talking about this with your significant other. :P</p>
+
+<p>Once upon a time there were a pair of people and they were destined to meet and 
+live a beautiful life together. There was only one snag… The way they met was 
+through a <a href="https://en.wikipedia.org/wiki/Charity_dating#:~:text=Charity%20dating%20is%20a%20process,value%20in%20such%20a%20date.">dating auction</a>. The dating auction is a 
+strange sort of auction because of the fact that there may be a soft “reserve price”
+that is independent of the selling price. A simple example of how this could end
+badly is where the bidder of the hypothetical pair wins the auction for 3 dollars.
+The auctioned partner is so offended that, although they went on the date, there
+was no happily ever after. The bidder, although actually having quite a high 
+valuation of the auctioned partner might not have bid high because he understood
+the probability was very low anybody else would win the auction when he bid anything
+over 3 dollars. Clearly there is an incentive for the bidder to not only take into
+account his own probability of winning in his consideration but also how the object
+of the bid feels about the winning bid as well.</p>
+
+<p>I will go into a bit of math a bit later… Needless to say this pair desperately
+needs a strategy!</p>
+
+<p>To begin thinking about this we should dive into two different kinds of auctions
+that appear in many introductions on the topic.</p>
+
+<ol>
+  <li>First Price Auction</li>
+  <li>Second Price Auction</li>
+</ol>
+
+<p>There are many many others and an infinite variation on these two alone but 
+let’s go into a tiny bit of detail. We will show soon how the dating auction, 
+even when using a second price mechanism approaches a first price revenue.</p>
+
+<h2 id="to-explain-the-two-basic-auctions">To Explain the Two Basic Auctions<a name="explanation1"></a></h2>
+
+<p>A first price auction is your standard auction where there are a bunch of people
+in a room screaming and the auctioneer listens for the highest bid(actually this
+is an english auction but very similar) and at the end of the auction when the 
+auctioneer decides the game has been played sells the item for the price that 
+was shouted.</p>
+
+<p>A second price auction is also a standard auction but less widely known to 
+lay-people. It is a variation where instead of paying the price that you shouted 
+for the item, you pay the price of the second highest bidder’s bid. 
+You may ask “Why is this even a thing?” The answer to that when you pay the 
+second highest bid it becomes in your favor to bid exactly how much you value the
+item.</p>
+
+<p>Let’s do some math:</p>
+
+<p>Let $ \beta^I(x) $ and $ \beta^{II}(x) $ be the strategy for a first and second
+price bidder respectively where x is the value the bidder actually places on the
+object. Let $ f(x) $ be the probability distribution function that the bidder 
+places a value x on the object. 
+<br /></p>
+
+\[F(x) = \int_0^x{f(y)dy}\]
+
+<p><br />
+F(x) is also known as the cumulative distribution function. That is F(x) represents the statement
+“What is the probability that a bidder places a value x or less on an item?” 
+Another quantity of interest for second price auction would be $ F_2(x) $. 
+This $ F_2(x) $ could be read as “What is the probability that the second highest
+bidder has a value x or less?” 
+We can write this as a function of F(x) by realizing that saying “What is the 
+probability that the second highest bidder has a value x or less?” is the same
+as saying “What is the probability that one bidder has a bidder higher than x
+and the rest lower than x?”</p>
+
+\[F_2(x) = (1-F(x))F(x)^{N-1}\]
+
+<p>Each bidder will want to maximize his returns. His returns are simply the difference
+in how much the bidder pays and how much he percieves he receives.</p>
+
+\[\mu(x) =  \begin{cases} 
+                        x-\beta(x),&amp; \text{if win}\\
+                        0 &amp; \text{otherwise}
+                        \end{cases}\]
+
+<p>This is saying that if the bidder loses then nothing is lost. If he wins then he
+gets the object but loses his bid.</p>
+
+  </div><a class="u-url" href="/2022/07/28/the-date-auction.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">GitHub User</li>
+          <li><a class="u-email" href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/jekyll" target="_blank" title="jekyll"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/jekyllrb" target="_blank" title="jekyllrb"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
