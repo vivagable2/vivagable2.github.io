@@ -72,7 +72,7 @@ when you start talking about this with your significant other. :P</p>
 <p>Once upon a time there were a pair of people and they were destined to meet and 
 live a beautiful life together. There was only one snag… The way they met was 
 through a <a href="https://en.wikipedia.org/wiki/Charity_dating#:~:text=Charity%20dating%20is%20a%20process,value%20in%20such%20a%20date.">dating auction</a>. The dating auction is a 
-strange sort of auction because of the fact that there may be a soft “reserve price”
+strange sort of auction because of the fact that there may be a soft <a href="https://www.investopedia.com/terms/r/reserve-price.asp#:~:text=Key%20Takeaways,even%20to%20the%20highest%20bidder.">reserve price</a>
 that is independent of the selling price. A simple example of how this could end
 badly is where the bidder of the hypothetical pair wins the auction for 3 dollars.
 The auctioned partner is so offended that, although they went on the date, there
@@ -102,16 +102,18 @@ even when using a second price mechanism approaches a first price revenue.</p>
 
 <p>A first price auction is your standard auction where there are a bunch of people
 in a room screaming and the auctioneer listens for the highest bid(actually this
-is an english auction but very similar) and at the end of the auction when the 
-auctioneer decides the game has been played sells the item for the price that 
-was shouted.</p>
+is an <a href="https://en.wikipedia.org/wiki/English_auction">english auction</a> 
+but very similar except for the fact that we are assuming this auction is sealed
+envelope meaning nobody knows of anybody else’s bid and there is no resale) and at 
+the end of the auction when the auctioneer decides the game has been played sells 
+the item for the price that was shouted.</p>
 
 <p>A second price auction is also a standard auction but less widely known to 
 lay-people. It is a variation where instead of paying the price that you shouted 
 for the item, you pay the price of the second highest bidder’s bid. 
 You may ask “Why is this even a thing?” The answer to that when you pay the 
 second highest bid it becomes in your favor to bid exactly how much you value the
-item.</p>
+item. This</p>
 
 <p>Let’s do some math:</p>
 
@@ -225,15 +227,40 @@ for the first price auction.</p>
 \[\underset{\beta}{\text{argmax}}\,\mu_{II}(x)\]
 
 <p>Now we don’t need to do any calculations here because we can notice something 
-interesting. In the right hand side of $\mu_{II}$ we see that there is only one value of $\beta_{II}(b) that actually arrives in our equation. The second highest 
+interesting. In the right hand side of $\mu_{II}$ we see that there is only one value of $\beta_{II}(b)$ that actually arrives in our equation. The second highest 
 bid. This is then set to be constant. Therefore the only thing that can be changed
 is the $F_2$ which is monotonically increasing. Therefore, $\mu_{II}$ is maximized
 when the bid is the same as the value. That is
 \(\beta_{II}(x) = x\)</p>
 
+<p>There is more to discuss about first and second price auctions. 
+If you are interested I highly suggest <a href="https://www.amazon.com/Auction-Theory-Vijay-Krishna/dp/012426297X">this excellent introduction by Vijay Krishna</a></p>
 <h1 id="dating-auction-derivation-">Dating Auction Derivation <a name="datingauctionderivation"></a></h1>
 <p>Now that we have examined the first and second price auction, we want to take a
 look at the dating auction. How is this different?</p>
+
+<p>The object of the auction has their own expectation of bid that they deem to be
+worthy of the auction that is hidden to the bidder that approximates a step 
+function.</p>
+
+\[\gamma(k,b_{\text{min}},x) = \frac{1}{2}(1+\tanh(k(x-b_\text{min})))\]
+
+<p><img src="/assets/posts/the-date-auction/pickiness.png" alt="Pickiness" /></p>
+
+<p>We incorporate this into our reward as:</p>
+
+\[\mu_D(x,k,b_\text{min},\text{win}) =  \begin{cases} 
+                        (x-\beta_{D}(x))\gamma(k,b_\text{min},\beta_D(x)),&amp; \text{if win}\\
+                        0 &amp; \text{otherwise}
+                        \end{cases}\]
+
+<p>Writing this out in the summed form:</p>
+
+\[\mu_D(x,k,b_\text{min}) = F_2(x)\gamma(k,b_\text{min},\beta_D(x))(x-\beta_{D}(x))\]
+
+<p>Now, the bidder doesn’t know a priori the parameters of gamma but he/she might
+have an expectation that we can write out as $k \sim N(\mu_k,\sigma_k)$ and
+$b_\text{min} \sim N(\mu_b,\sigma_b)$.</p>
 
 <h1 id="dating-auction-characteristics-">Dating Auction Characteristics <a name="datingauctioncharacteristics"></a></h1>
 

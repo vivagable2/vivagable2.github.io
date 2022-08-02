@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-02T04:21:05-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Aviv’s Crazy Flight</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">Asteroid Mining1</title><link href="http://localhost:4000/2022/07/30/asteroid-mining1.html" rel="alternate" type="text/html" title="Asteroid Mining1" /><published>2022-07-30T00:00:00-07:00</published><updated>2022-07-30T00:00:00-07:00</updated><id>http://localhost:4000/2022/07/30/asteroid-mining1</id><content type="html" xml:base="http://localhost:4000/2022/07/30/asteroid-mining1.html"><![CDATA[]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">The Date Auction</title><link href="http://localhost:4000/2022/07/28/the-date-auction.html" rel="alternate" type="text/html" title="The Date Auction" /><published>2022-07-28T00:00:00-07:00</published><updated>2022-07-28T00:00:00-07:00</updated><id>http://localhost:4000/2022/07/28/the-date-auction</id><content type="html" xml:base="http://localhost:4000/2022/07/28/the-date-auction.html"><![CDATA[<h1 id="table-of-contents">Table of Contents</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-02T08:26:59-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Aviv’s Crazy Flight</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">What Should I Do During Stock Market Collapse</title><link href="http://localhost:4000/2022/08/01/what-should-i-do-during-stock-market-collapse.html" rel="alternate" type="text/html" title="What Should I Do During Stock Market Collapse" /><published>2022-08-01T00:00:00-07:00</published><updated>2022-08-01T00:00:00-07:00</updated><id>http://localhost:4000/2022/08/01/what-should-i-do-during-stock-market-collapse</id><content type="html" xml:base="http://localhost:4000/2022/08/01/what-should-i-do-during-stock-market-collapse.html"><![CDATA[]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Asteroid Prospecting</title><link href="http://localhost:4000/2022/07/30/asteroid-prospecting.html" rel="alternate" type="text/html" title="Asteroid Prospecting" /><published>2022-07-30T00:00:00-07:00</published><updated>2022-07-30T00:00:00-07:00</updated><id>http://localhost:4000/2022/07/30/asteroid-prospecting</id><content type="html" xml:base="http://localhost:4000/2022/07/30/asteroid-prospecting.html"><![CDATA[]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">The Date Auction</title><link href="http://localhost:4000/2022/07/28/the-date-auction.html" rel="alternate" type="text/html" title="The Date Auction" /><published>2022-07-28T00:00:00-07:00</published><updated>2022-07-28T00:00:00-07:00</updated><id>http://localhost:4000/2022/07/28/the-date-auction</id><content type="html" xml:base="http://localhost:4000/2022/07/28/the-date-auction.html"><![CDATA[<h1 id="table-of-contents">Table of Contents</h1>
 <ol>
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#explanation1">Explanation of First and Second Price Auctions</a>
@@ -22,7 +22,7 @@ when you start talking about this with your significant other. :P</p>
 <p>Once upon a time there were a pair of people and they were destined to meet and 
 live a beautiful life together. There was only one snag… The way they met was 
 through a <a href="https://en.wikipedia.org/wiki/Charity_dating#:~:text=Charity%20dating%20is%20a%20process,value%20in%20such%20a%20date.">dating auction</a>. The dating auction is a 
-strange sort of auction because of the fact that there may be a soft “reserve price”
+strange sort of auction because of the fact that there may be a soft <a href="https://www.investopedia.com/terms/r/reserve-price.asp#:~:text=Key%20Takeaways,even%20to%20the%20highest%20bidder.">reserve price</a>
 that is independent of the selling price. A simple example of how this could end
 badly is where the bidder of the hypothetical pair wins the auction for 3 dollars.
 The auctioned partner is so offended that, although they went on the date, there
@@ -52,16 +52,18 @@ even when using a second price mechanism approaches a first price revenue.</p>
 
 <p>A first price auction is your standard auction where there are a bunch of people
 in a room screaming and the auctioneer listens for the highest bid(actually this
-is an english auction but very similar) and at the end of the auction when the 
-auctioneer decides the game has been played sells the item for the price that 
-was shouted.</p>
+is an <a href="https://en.wikipedia.org/wiki/English_auction">english auction</a> 
+but very similar except for the fact that we are assuming this auction is sealed
+envelope meaning nobody knows of anybody else’s bid and there is no resale) and at 
+the end of the auction when the auctioneer decides the game has been played sells 
+the item for the price that was shouted.</p>
 
 <p>A second price auction is also a standard auction but less widely known to 
 lay-people. It is a variation where instead of paying the price that you shouted 
 for the item, you pay the price of the second highest bidder’s bid. 
 You may ask “Why is this even a thing?” The answer to that when you pay the 
 second highest bid it becomes in your favor to bid exactly how much you value the
-item.</p>
+item. This</p>
 
 <p>Let’s do some math:</p>
 
@@ -175,30 +177,43 @@ for the first price auction.</p>
 \[\underset{\beta}{\text{argmax}}\,\mu_{II}(x)\]
 
 <p>Now we don’t need to do any calculations here because we can notice something 
-interesting. In the right hand side of $\mu_{II}$ we see that there is only one value of $\beta_{II}(b) that actually arrives in our equation. The second highest 
+interesting. In the right hand side of $\mu_{II}$ we see that there is only one value of $\beta_{II}(b)$ that actually arrives in our equation. The second highest 
 bid. This is then set to be constant. Therefore the only thing that can be changed
 is the $F_2$ which is monotonically increasing. Therefore, $\mu_{II}$ is maximized
 when the bid is the same as the value. That is
 \(\beta_{II}(x) = x\)</p>
 
+<p>There is more to discuss about first and second price auctions. 
+If you are interested I highly suggest <a href="https://www.amazon.com/Auction-Theory-Vijay-Krishna/dp/012426297X">this excellent introduction by Vijay Krishna</a></p>
 <h1 id="dating-auction-derivation-">Dating Auction Derivation <a name="datingauctionderivation"></a></h1>
 <p>Now that we have examined the first and second price auction, we want to take a
 look at the dating auction. How is this different?</p>
+
+<p>The object of the auction has their own expectation of bid that they deem to be
+worthy of the auction that is hidden to the bidder that approximates a step 
+function.</p>
+
+\[\gamma(k,b_{\text{min}},x) = \frac{1}{2}(1+\tanh(k(x-b_\text{min})))\]
+
+<p><img src="/assets/posts/the-date-auction/pickiness.png" alt="Pickiness" /></p>
+
+<p>We incorporate this into our reward as:</p>
+
+\[\mu_D(x,k,b_\text{min},\text{win}) =  \begin{cases} 
+                        (x-\beta_{D}(x))\gamma(k,b_\text{min},\beta_D(x)),&amp; \text{if win}\\
+                        0 &amp; \text{otherwise}
+                        \end{cases}\]
+
+<p>Writing this out in the summed form:</p>
+
+\[\mu_D(x,k,b_\text{min}) = F_2(x)\gamma(k,b_\text{min},\beta_D(x))(x-\beta_{D}(x))\]
+
+<p>Now, the bidder doesn’t know a priori the parameters of gamma but he/she might
+have an expectation that we can write out as $k \sim N(\mu_k,\sigma_k)$ and
+$b_\text{min} \sim N(\mu_b,\sigma_b)$.</p>
 
 <h1 id="dating-auction-characteristics-">Dating Auction Characteristics <a name="datingauctioncharacteristics"></a></h1>
 
 <h1 id="dating-auction-simulation-">Dating Auction Simulation <a name="datingauctionsimulation"></a></h1>
 
-<h1 id="happily-ever-after-">Happily Ever After <a name="happilyeverafter"></a></h1>]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><summary type="html"><![CDATA[Table of Contents Introduction Explanation of First and Second Price Auctions First Price Auction Derivation Second Price Auction Derivation Dating Auction Derivation Dating Auction Characteristics Dating Auction Simulation Happily Ever After]]></summary></entry><entry><title type="html">Welcome To Jekyll</title><link href="http://localhost:4000/2016/05/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome To Jekyll" /><published>2016-05-20T00:00:00-07:00</published><updated>2016-05-20T00:00:00-07:00</updated><id>http://localhost:4000/2016/05/20/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2016/05/20/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+<h1 id="happily-ever-after-">Happily Ever After <a name="happilyeverafter"></a></h1>]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><summary type="html"><![CDATA[Table of Contents Introduction Explanation of First and Second Price Auctions First Price Auction Derivation Second Price Auction Derivation Dating Auction Derivation Dating Auction Characteristics Dating Auction Simulation Happily Ever After]]></summary></entry></feed>
