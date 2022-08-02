@@ -1,11 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-30T19:46:13+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Aviv’s Crazy Flight</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">The Date Auction</title><link href="http://localhost:4000/2022/07/28/the-date-auction.html" rel="alternate" type="text/html" title="The Date Auction" /><published>2022-07-28T00:00:00+02:00</published><updated>2022-07-28T00:00:00+02:00</updated><id>http://localhost:4000/2022/07/28/the-date-auction</id><content type="html" xml:base="http://localhost:4000/2022/07/28/the-date-auction.html"><![CDATA[<h1 id="table-of-contents">Table of Contents</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-02T04:21:05-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Aviv’s Crazy Flight</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><author><name>GitHub User</name><email>your-email@domain.com</email></author><entry><title type="html">Asteroid Mining1</title><link href="http://localhost:4000/2022/07/30/asteroid-mining1.html" rel="alternate" type="text/html" title="Asteroid Mining1" /><published>2022-07-30T00:00:00-07:00</published><updated>2022-07-30T00:00:00-07:00</updated><id>http://localhost:4000/2022/07/30/asteroid-mining1</id><content type="html" xml:base="http://localhost:4000/2022/07/30/asteroid-mining1.html"><![CDATA[]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">The Date Auction</title><link href="http://localhost:4000/2022/07/28/the-date-auction.html" rel="alternate" type="text/html" title="The Date Auction" /><published>2022-07-28T00:00:00-07:00</published><updated>2022-07-28T00:00:00-07:00</updated><id>http://localhost:4000/2022/07/28/the-date-auction</id><content type="html" xml:base="http://localhost:4000/2022/07/28/the-date-auction.html"><![CDATA[<h1 id="table-of-contents">Table of Contents</h1>
 <ol>
-  <li><a href="#introduction">Introduction</a>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#explanation1">Explanation of First and Second Price Auctions</a>
     <ol>
-      <li><a href="#explanation1">Explanation of First and Second Price Auctions</a></li>
+      <li><a href="#firstprice">First Price Auction Derivation</a></li>
+      <li><a href="#secondprice">Second Price Auction Derivation</a></li>
     </ol>
   </li>
+  <li><a href="#datingauctionderivation">Dating Auction Derivation</a></li>
+  <li><a href="#datingauctionanalysis">Dating Auction Characteristics</a></li>
+  <li><a href="#datingauctionsimulation">Dating Auction Simulation</a></li>
+  <li><a href="#happilyeverafter">Happily Ever After</a></li>
 </ol>
 
 <h1 id="introduction-">Introduction <a name="introduction"></a></h1>
@@ -42,7 +48,7 @@ that appear in many introductions on the topic.</p>
 let’s go into a tiny bit of detail. We will show soon how the dating auction, 
 even when using a second price mechanism approaches a first price revenue.</p>
 
-<h2 id="to-explain-the-two-basic-auctions">To Explain the Two Basic Auctions<a name="explanation1"></a></h2>
+<h1 id="to-explain-the-two-basic-auctions">To Explain the Two Basic Auctions<a name="explanation1"></a></h1>
 
 <p>A first price auction is your standard auction where there are a bunch of people
 in a room screaming and the auctioneer listens for the highest bid(actually this
@@ -59,7 +65,7 @@ item.</p>
 
 <p>Let’s do some math:</p>
 
-<p>Let $ \beta^I(x) $ and $ \beta^{II}(x) $ be the strategy for a first and second
+<p>Let $ \beta_I(x) $ and $ \beta_{II}(x) $ be the strategy for a first and second
 price bidder respectively where x is the value the bidder actually places on the
 object. Let $ f(x) $ be the probability distribution function that the bidder 
 places a value x on the object. 
@@ -75,21 +81,115 @@ This $ F_2(x) $ could be read as “What is the probability that the second high
 bidder has a value x or less?” 
 We can write this as a function of F(x) by realizing that saying “What is the 
 probability that the second highest bidder has a value x or less?” is the same
-as saying “What is the probability that one bidder has a bidder higher than x
+as saying “What is the probability that one bidder has a value higher than x
 and the rest lower than x?”</p>
 
 \[F_2(x) = (1-F(x))F(x)^{N-1}\]
 
-<p>Each bidder will want to maximize his returns. His returns are simply the difference
-in how much the bidder pays and how much he percieves he receives.</p>
+<p>The derivative of this is also useful and will come into play later(TODO:DO THIS DERIVATIVE ON PAPER):</p>
 
-\[\mu(x) =  \begin{cases} 
-                        x-\beta(x),&amp; \text{if win}\\
+\[\frac{\partial F_2(x)}{x}= -f(x)(F(x)^{N-1}+(1-F(x))(N-1)(F(x)^{N-2})+)\]
+
+<p>Each bidder will want to maximize his returns. His returns are simply the 
+difference in how much the bidder pays and how much he percieves he receives.</p>
+
+<h2 id="first-price-auction-derivation-">First Price Auction Derivation <a name="firstprice"></a></h2>
+
+\[\mu_I(x,\text{win}) =  \begin{cases} 
+                        x-\beta_I(x),&amp; \text{if win}\\
                         0 &amp; \text{otherwise}
                         \end{cases}\]
 
 <p>This is saying that if the bidder loses then nothing is lost. If he wins then he
-gets the object but loses his bid.</p>]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><summary type="html"><![CDATA[Table of Contents Introduction Explanation of First and Second Price Auctions]]></summary></entry><entry><title type="html">Welcome To Jekyll</title><link href="http://localhost:4000/2016/05/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome To Jekyll" /><published>2016-05-20T00:00:00+02:00</published><updated>2016-05-20T00:00:00+02:00</updated><id>http://localhost:4000/2016/05/20/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2016/05/20/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+gets the object but loses his bid.</p>
+
+<p>This can be written as a sum:</p>
+
+\[\mu^I(x) = \mu_I(x,\text{True}) F_2(\beta_I^{-1}(b)) + \mu_I(x,\text{False})*\
+(1-F_2(\beta_I^{-1}(b))) = (x-\beta_I(x)) F_2(\beta_I^{-1}(b))\]
+
+<p>Now the optimal strategy for a bidder is the $\beta$ that maximizes $\mu$.</p>
+
+\[\beta_p(x) = \underset{\beta}{\text{argmax}}\, \mu(x)\]
+
+<p>This yields the differential equation:</p>
+
+\[(x-\beta_I(x))(\frac{\partial F_2}{\beta_I^{-1}} \
+\frac{\partial{\beta_I^{-1}}}{\partial{\beta_I}})  = F_2(\beta_I^{-1}(b))\]
+
+<p>Notice we assumed that the distributions of values of all bidders are sampled
+from the same distribution F from all bidders. This allows us to make the observation
+that $\beta^{-1}(b) = x$. Said another way, there is a one to one correspondence
+between what the bidder values the item at and what the bidder wants to bid.</p>
+
+<p>We can therefore say that</p>
+
+\[\frac{\partial{\beta^{-1}}}{\partial{\beta}} =  \
+\frac{1}{\frac{\partial{\beta}}{\partial{\beta^{-1}}}} = \
+\frac{1}{\frac{\partial{\beta}}{\partial{x}}(\beta^{-1}(b))}\]
+
+<p>Rewriting the differential equations above with this in mind we get:</p>
+
+\[xf(x) = F_2(x)\beta_I'(x)+\beta_I(x) f_2(x) = \frac{d}{dx}(F_2(x)\beta_I(x))\]
+
+<p>integrating:</p>
+
+\[\int_0^x{yf_2(y)dy} =F_2(x)\beta_I(x)\]
+
+<p>Written in a different way:</p>
+
+\[\beta_I(x) = \int_0^x{y \frac{f_2(y)}{F_2(x)}dy}\]
+
+<p>The right hand side is the expectation of the second highest value given the 
+highest value is x.</p>
+
+<p>We write it out one last time:</p>
+
+\[\beta_I(x) = E[y|y\lt x]\]
+
+<p>Apparently the first price bidder should bid what he/she expects the second
+highest value will be given it is below their value for the object. This makes
+intuitive sense since, although the bidder may improve their chances of winning
+the object if they bid higher than their value, their expected winnings become
+negative. They also don’t want to pay their value since if they know they can win
+at a bid lower than their value they would get more of a reward.</p>
+
+<h2 id="second-price-auction-derivation-">Second Price Auction Derivation <a name="secondprice"></a></h2>
+
+<p>For second price the process is simpler.</p>
+
+<p>We have</p>
+
+\[\mu_{II}(x,\text{win}) =  \begin{cases} 
+                        x-\beta_{II}^-(x),&amp; \text{if win}\\
+                        0 &amp; \text{otherwise}
+                        \end{cases}\]
+
+<p>Where $\beta_{II}^-$ is the second highest bid. Rewriting $\mu_{II}$ just like 
+for the first price auction.</p>
+
+\[\mu_{II}(x) = (x-\beta_{II}^-(b))F_2(\beta_{II}^{-1}(b))\]
+
+<p>We again want</p>
+
+\[\underset{\beta}{\text{argmax}}\,\mu_{II}(x)\]
+
+<p>Now we don’t need to do any calculations here because we can notice something 
+interesting. In the right hand side of $\mu_{II}$ we see that there is only one value of $\beta_{II}(b) that actually arrives in our equation. The second highest 
+bid. This is then set to be constant. Therefore the only thing that can be changed
+is the $F_2$ which is monotonically increasing. Therefore, $\mu_{II}$ is maximized
+when the bid is the same as the value. That is
+\(\beta_{II}(x) = x\)</p>
+
+<h1 id="dating-auction-derivation-">Dating Auction Derivation <a name="datingauctionderivation"></a></h1>
+<p>Now that we have examined the first and second price auction, we want to take a
+look at the dating auction. How is this different?</p>
+
+<h1 id="dating-auction-characteristics-">Dating Auction Characteristics <a name="datingauctioncharacteristics"></a></h1>
+
+<h1 id="dating-auction-simulation-">Dating Auction Simulation <a name="datingauctionsimulation"></a></h1>
+
+<h1 id="happily-ever-after-">Happily Ever After <a name="happilyeverafter"></a></h1>]]></content><author><name>GitHub User</name><email>your-email@domain.com</email></author><summary type="html"><![CDATA[Table of Contents Introduction Explanation of First and Second Price Auctions First Price Auction Derivation Second Price Auction Derivation Dating Auction Derivation Dating Auction Characteristics Dating Auction Simulation Happily Ever After]]></summary></entry><entry><title type="html">Welcome To Jekyll</title><link href="http://localhost:4000/2016/05/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome To Jekyll" /><published>2016-05-20T00:00:00-07:00</published><updated>2016-05-20T00:00:00-07:00</updated><id>http://localhost:4000/2016/05/20/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2016/05/20/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
 
