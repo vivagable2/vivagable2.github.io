@@ -172,7 +172,7 @@ We again want
 $$\underset{\beta}{\text{argmax}}\,\mu_{II}(x)$$
 
 Now we don't need to do any calculations here because we can notice something 
-interesting. In the right hand side of $\mu_{II}$ we see that there is only one value of $\beta_{II}(b) that actually arrives in our equation. The second highest 
+interesting. In the right hand side of $\mu_{II}$ we see that there is only one value of $\beta_{II}(b)$ that actually arrives in our equation. The second highest 
 bid. This is then set to be constant. Therefore the only thing that can be changed
 is the $F_2$ which is monotonically increasing. Therefore, $\mu_{II}$ is maximized
 when the bid is the same as the value. That is
